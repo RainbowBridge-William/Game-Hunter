@@ -1,0 +1,41 @@
+<!--
+Name: William Wang
+Date: 4/22/2021
+Section: CSE 154 AO
+
+This index.html sets every element of the timer, including minute/second container, title,
+and controlbar.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Permanent+Marker&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>GameHunter</title>
+  </head>
+  <body>
+    <header>
+      <h1>Game Hunter</h1>
+      <p>Find you the cheapest game you search for</p>
+    </header>
+    <main>
+      <section id="search">
+        <input type="text" placeholder="Search a game by name" id="searchBar" />
+        <button id="searchBtn">Search</button>
+      </section>
+      <section id="findings"></section>
+    </main>
+    <footer>
+      <p>All data from <a href="https://apidocs.cheapshark.com/">CheapShark API</a></p>
+    </footer>
+  </body>
+</html>
