@@ -1,3 +1,13 @@
+/* 
+Name: William Wang
+Date: 4/22/2021
+Section: CSE 154 AO
+
+This index.html sets every element of the timer, including minute/second container, title,
+and controlbar.
+*/
+
+
 :root {
   --primary-color: rgb(27, 40, 56);
 }
