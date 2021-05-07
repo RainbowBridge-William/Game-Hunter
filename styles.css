@@ -3,8 +3,7 @@ Name: William Wang
 Date: 4/22/2021
 Section: CSE 154 AO
 
-This index.html sets every element of the timer, including minute/second container, title,
-and controlbar.
+This styles.css defines all structures and designs of the webpage, uses the steam color scheme, and added glow effect, giving the webpage steam-like and modern feeling.
 */
 :root {
   --primary-color: rgb(27, 40, 56);
@@ -23,6 +22,29 @@ html {
   scroll-behavior: smooth;
 }
 
+h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+button {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(0, 119, 255, 0.616);
+  box-shadow: 0 0 10px rgb(0, 119, 255);
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(0, 119, 255);
+  transition: 0.4s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 40px 3px rgb(90, 167, 255);
+  color: rgb(90, 167, 255);
+  cursor: pointer;
+}
+
 header,
 #loading {
   background-color: black;
@@ -31,11 +53,6 @@ header,
   color: white;
   font-family: "Permanent Marker", cursive;
   text-shadow: 5px 2px 2px rgb(0, 119, 255);
-}
-
-h1 {
-  font-size: 60px;
-  margin: 0;
 }
 
 header p {
@@ -71,29 +88,11 @@ header p {
 ::placeholder {
   color: rgb(184, 184, 184);
   font-family: "Montserrat", sans-serif;
+  font-style: italic;
 }
 
 #search #searchBar:focus {
   box-shadow: 0 0 40px 3px rgb(90, 167, 255);
-}
-
-button {
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid rgba(0, 119, 255, 0.616);
-  box-shadow: 0 0 10px rgb(0, 119, 255);
-  border-radius: 10px;
-  font-size: 20px;
-  padding: 10px;
-  font-family: "Montserrat", sans-serif;
-  color: rgb(0, 119, 255);
-  transition: 0.4s ease;
-  scroll-behavior: smooth;
-}
-
-button:hover {
-  box-shadow: 0 0 40px 3px rgb(90, 167, 255);
-  color: rgb(90, 167, 255);
-  cursor: pointer;
 }
 
 #findings {
@@ -122,7 +121,7 @@ button:hover {
 #findings .card img {
   max-width: 80%;
   min-width: 50%;
-  max-height: 65%;
+  max-height: 55%;
 }
 
 #findings .card:hover {
@@ -130,7 +129,7 @@ button:hover {
 }
 
 #findings .card button {
-  font-size: 1rem;
+  font-size: 14px;
   padding: 5px;
 }
 

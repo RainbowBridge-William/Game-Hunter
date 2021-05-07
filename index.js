@@ -3,7 +3,8 @@
  * Date: 4/22/2021
  * Section: CSE 154 AO
  *
- * This index.js
+ * This index.js takes the game name that user inputed, requests the server for game information,
+ * then processes it to present those information on my steam-like designed webpage
  */
 "use strict";
 
@@ -77,6 +78,11 @@
     }
   }
 
+  /**
+   * Throws an error if the response is not correct, returns the valid response
+   * @param {*} res reponse from the server
+   * @returns the response
+   */
   async function statusCheck(res) {
     if (!res.ok) {
       throw new Error(await res.text());
