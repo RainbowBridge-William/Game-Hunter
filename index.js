@@ -1,6 +1,6 @@
 /**
  * Name: William Wang
- * Date: 4/22/2021
+ * Date: 5/6/2021
  * Section: CSE 154 AO
  *
  * This index.js takes the game name that user inputed, requests the server for game information,
