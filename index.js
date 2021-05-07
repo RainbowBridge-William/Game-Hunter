@@ -8,7 +8,7 @@
  */
 "use strict";
 
-(function () {
+(function() {
   const URL = "https://www.cheapshark.com/api/1.0/";
 
   window.addEventListener("load", init);
@@ -17,14 +17,14 @@
    * Add event listener to search button to let it ask for target data through API
    */
   function init() {
-    id("searchBtn").addEventListener("click", makeRequest);
+    id("search-btn").addEventListener("click", makeRequest);
   }
 
   /**
    * Request and fetch what the user input and process the response
    */
   function makeRequest() {
-    let title = id("searchBar").value;
+    let title = id("search-bar").value;
     let url = `${URL}games?title=${title}`;
     let board = id("findings");
     let loading = id("loading");
@@ -46,7 +46,7 @@
 
   /**
    * Process the response and put each element on a card, then append the card to front-end
-   * @param {object} res the response from the server containing cheap games information
+   * @param {JSON} res the response from the server containing cheap games information
    */
   function processData(res) {
     for (let key in res) {
@@ -80,7 +80,7 @@
 
   /**
    * Throws an error if the response is not correct, returns the valid response
-   * @param {*} res reponse from the server
+   * @param {JSON} res reponse from the server
    * @returns the response
    */
   async function statusCheck(res) {
@@ -93,7 +93,7 @@
   /**
    * Error handler when fetch fails
    */
-  async function error() {
+  function error() {
     let alert = gen("h2");
     alert.textContent = "Error:( Something is wrong. Please try again";
     id("findings").appendChild(alert);

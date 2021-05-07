@@ -72,7 +72,7 @@ header p {
   background: no-repeat center / cover url(./resource/backgound.jpg);
 }
 
-#search #searchBar {
+#search #search-bar {
   padding: 0 10px;
   color: white;
   font-family: "Montserrat", sans-serif;
@@ -93,7 +93,7 @@ header p {
   font-style: italic;
 }
 
-#search #searchBar:focus {
+#search #search-bar:focus {
   box-shadow: 0 0 40px 3px rgb(90, 167, 255);
 }
 
