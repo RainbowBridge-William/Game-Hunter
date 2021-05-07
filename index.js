@@ -24,6 +24,8 @@
     let title = id("searchBar").value;
     let url = `${URL}games?title=${title}`;
     let board = id("findings");
+
+    window.location.href = "#findings";
     while (board.hasChildNodes()) {
       board.removeChild(board.lastChild);
     }
@@ -49,7 +51,7 @@
       card.classList.add("card");
       title.textContent = obj.external;
       image.src = obj.thumb;
-      deal.textContent = `Cheapest deal: ${obj.cheapest}USD`;
+      deal.textContent = `Cheapest deal: ${obj.cheapest} USD`;
       btn.textContent = "Check Deal";
       btn.addEventListener("click", () => {
         window.open(

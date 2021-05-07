@@ -84,7 +84,7 @@ button {
   transition: 0.4s ease;
 }
 
-#search button:hover {
+button:hover {
   box-shadow: 0 0 40px 3px rgb(90, 167, 255);
   color: rgb(90, 167, 255);
   cursor: pointer;
@@ -92,23 +92,44 @@ button {
 
 #findings {
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   background: var(--primary-color);
 }
 
 #findings .card {
+  width: 320px;
+  height: 400px;
   box-shadow: 0 0 5px rgb(0, 119, 255);
+  margin: 1rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background: linear-gradient(to right top, rgb(90, 167, 255), rgb(27, 40, 56));
   transition: 0.4s;
 }
 
+#findings .card img {
+  max-width: 80%;
+  min-width: 50%;
+  max-height: 65%;
+}
+
 #findings .card:hover {
   box-shadow: 0 0 30px 2px rgb(0, 119, 255);
+}
+
+#findings .card button {
+  font-size: 1rem;
+  padding: 5px;
+}
+
+#findings .card button:hover {
+  background: rgb(0, 0, 0, 0.5);
 }
 
 footer {
