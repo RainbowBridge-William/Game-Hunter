@@ -25,7 +25,6 @@
     let url = `${URL}games?title=${title}`;
     let board = id("findings");
 
-    window.location.href = "#findings";
     while (board.hasChildNodes()) {
       board.removeChild(board.lastChild);
     }
@@ -33,11 +32,11 @@
       .then(statusCheck)
       .then((res) => res.json())
       .then(processData)
+      .then(() => (window.location.href = "#findings"))
       .catch(error);
   }
 
   function processData(res) {
-    console.log(res);
     for (let key in res) {
       // For/In Loop = object version forEach. key is the index of object
       let obj = res[key];
