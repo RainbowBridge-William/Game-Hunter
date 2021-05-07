@@ -22,6 +22,8 @@
 
   /**
    * Request and fetch what the user input and process the response
+   * Toggle the loading page when fetching and processing
+   * Clear the page when new request
    */
   function makeRequest() {
     let title = id("search-bar").value;
