@@ -1,9 +1,10 @@
-/* 
+/*
 Name: William Wang
 Date: 5/6/2021
 Section: CSE 154 AO
 
-This styles.css defines all structures and designs of the webpage, uses the steam color scheme, and added glow effect, giving the webpage steam-like and modern feeling.
+This styles.css defines all structures and designs of the webpage, uses the steam color scheme,
+and added glow effect, giving the webpage steam-like and modern feeling.
 */
 :root {
   --primary-color: rgb(27, 40, 56);
@@ -67,6 +68,7 @@ header p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* from https://wallpaperaccess.com/steam */
   background: no-repeat center / cover url(./resource/backgound.jpg);
 }
 
