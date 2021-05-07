@@ -19,13 +19,16 @@
     id("searchBtn").addEventListener("click", makeRequest);
   }
 
+  /**
+   * Request and fetch what the user input and process the response
+   */
   function makeRequest() {
     let title = id("searchBar").value;
     let url = `${URL}games?title=${title}`;
     let board = id("findings");
-    let loading = id("loading")
+    let loading = id("loading");
 
-    loading.classList.toggle
+    loading.classList.remove("disappear");
     while (board.hasChildNodes()) {
       board.removeChild(board.lastChild);
     }
@@ -33,7 +36,10 @@
       .then(statusCheck)
       .then((res) => res.json())
       .then(processData)
-      .then(() => (window.location.href = "#findings"))
+      .then(() => {
+        window.location.href = "#findings";
+        loading.classList.add("disappear");
+      })
       .catch(error);
   }
 
