@@ -137,6 +137,16 @@ button:hover {
   background: rgba(0, 0, 0, 0.4);
 }
 
+#loading {
+  width: 100%;
+  height: 1vh;
+  z-
+}
+
+.disappear {
+  display: none;
+}
+
 footer {
   width: 100%;
   position: relative;

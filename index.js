@@ -3,8 +3,7 @@
  * Date: 4/22/2021
  * Section: CSE 154 AO
  *
- * This index.html sets every element of the timer, including minute/second container, title,
- * and controlbar.
+ * This index.js
  */
 "use strict";
 
@@ -14,7 +13,7 @@
   window.addEventListener("load", init);
 
   /**
-   * CHANGE: Describe what your init function does here.
+   * Add event listener to search button to let it ask for target data through API
    */
   function init() {
     id("searchBtn").addEventListener("click", makeRequest);
@@ -24,7 +23,9 @@
     let title = id("searchBar").value;
     let url = `${URL}games?title=${title}`;
     let board = id("findings");
+    let loading = id("loading")
 
+    loading.classList.toggle
     while (board.hasChildNodes()) {
       board.removeChild(board.lastChild);
     }
@@ -36,6 +37,10 @@
       .catch(error);
   }
 
+  /**
+   * Process the response and put each element on a card, then append the card to front-end
+   * @param {object} res the response from the server containing cheap games information
+   */
   function processData(res) {
     for (let key in res) {
       // For/In Loop = object version forEach. key is the index of object
@@ -58,7 +63,6 @@
           "_blank"
         );
       });
-
       card.appendChild(title);
       card.appendChild(image);
       card.appendChild(deal);
@@ -74,6 +78,9 @@
     return res;
   }
 
+  /**
+   * Error handler when fetch fails
+   */
   async function error() {
     let alert = gen("h2");
     alert.textContent = "Error:( Something is wrong. Please try again";
@@ -87,24 +94,6 @@
    */
   function id(idName) {
     return document.getElementById(idName);
-  }
-
-  /**
-   * Returns the first element that matches the given CSS selector.
-   * @param {string} selector - CSS query selector.
-   * @returns {object} The first DOM object matching the query.
-   */
-  function qs(selector) {
-    return document.querySelector(selector);
-  }
-
-  /**
-   * Returns the array of elements that match the given CSS selector.
-   * @param {string} selector - CSS query selector
-   * @returns {object[]} array of DOM objects matching the query.
-   */
-  function qsa(selector) {
-    return document.querySelectorAll(selector);
   }
 
   /**
