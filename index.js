@@ -23,6 +23,10 @@
   function makeRequest() {
     let title = id("searchBar").value;
     let url = `${URL}games?title=${title}`;
+    let board = id("findings");
+    while (board.hasChildNodes()) {
+      board.removeChild(board.lastChild);
+    }
     fetch(url)
       .then(statusCheck)
       .then((res) => res.json())
@@ -47,7 +51,12 @@
       image.src = obj.thumb;
       deal.textContent = `Cheapest deal: ${obj.cheapest}USD`;
       btn.textContent = "Check Deal";
-      btn.onclick = `window.open("https://www.cheapshark.com/redirect?dealID=${dealID}", "_blank")`;
+      btn.addEventListener("click", () => {
+        window.open(
+          `https://www.cheapshark.com/redirect?dealID=${dealID}`,
+          "_blank"
+        );
+      });
 
       card.appendChild(title);
       card.appendChild(image);
