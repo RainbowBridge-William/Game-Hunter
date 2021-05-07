@@ -83,7 +83,7 @@
   /**
    * Throws an error if the response is not correct, returns the valid response
    * @param {JSON} res reponse from the server
-   * @returns the response
+   * @returns {JSON} the response
    */
   async function statusCheck(res) {
     if (!res.ok) {
